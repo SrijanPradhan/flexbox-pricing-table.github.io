@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(15,15,162,1) 48%, rgba(0,212,255,0.938813025210084) 100%);   
+}
+
+.heading {
+    /* background-color: blueviolet; */
+    margin-top: 150px;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-decoration: none;
+    color: #fff;
+    overflow: hidden;
+}
+
+.pricing-container {
+    display: flex;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.pricing-plan-1,.pricing-plan-2,.pricing-plan-3 {
+    background-color: #9ff2ff;
+    flex: 1;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+    border: solid 2px white;
+    border-radius: 7px;
+    -webkit-box-shadow: 5px 10px 60px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 10px 60px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 10px 60px 0px rgba(0,0,0,0.75);
+
+}
+
+.heading {
+    animation : 1s linear slidetop;
+}
+
+@keyframes slidetop {
+    from {
+        transform : translateY(-300%)
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.pricing-plan-1 {
+    animation: 1s linear slideleft;
+}
+
+@keyframes slideleft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.pricing-plan-2 {
+    animation: 1s linear slidebottom;
+}
+
+@keyframes slidebottom {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.pricing-plan-3 {
+    animation: 1s linear slideright;
+}
+
+@keyframes slideright {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+.plan-title {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.plan-price {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.plan-features {
+    line-height: 40px;
+}
+
+.plan-button {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(0, 149, 255);
+    color: aliceblue;
+}
+
+.plan-button:hover {
+    background-color: white;
+    border-color: blue;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+}
+
+@media (max-width: 1250px) {
+    .pricing-container {
+        flex-direction: column;
+        height: 100%;
+        /* gap: 0.5rem; */
+    }
+
+    .pricing-plan-1,.pricing-plan-2,.pricing-plan-3 {
+        max-width: 300px;
+        max-height: 270px;
+    }
+
+    .heading {
+        display: block;
+    }
+
+}
